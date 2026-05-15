@@ -38,13 +38,13 @@
         </h1>
         
         <p class="text-lg text-slate-600 max-w-xl mx-auto font-medium mt-4 bg-white/60 backdrop-blur-sm py-2 px-6 rounded-full inline-block shadow-sm">
-            I updated the list with all your Instagram links ✨
+            I updated the list with all 12 amazing options ✨
         </p>
     </div>
 
     <!-- MAIN CARDS CONTAINER -->
     <div class="max-w-7xl mx-auto px-4 md:px-8">
-        <div id="cards-container" class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+        <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <!-- Cards will be injected here by JavaScript -->
         </div>
         
@@ -121,103 +121,236 @@
             `;
         }
 
-        // --- PHOTOGRAPHY DATA ---
+        // --- ALL 12 PHOTOGRAPHY PROPOSALS DATA ---
         const photographers = [
             {
                 id: 1,
                 name: "Label Knot",
-                price: "1.2 Lakhs",
+                price: "1.5 Lakhs",
                 tagline: "The Essential Coverage",
-                events: ["Engagement", "Madhuram Veppu", "Wedding"],
+                events: ["Engagement", "Wedding", "Pre/Post-Wed"],
                 crew: "2 Photographers + 2 Videographers",
                 deliverables: [
                     "2 Premium Albums (50 leaf)",
                     "2 Mini Books & 4 Photo Frames",
                     "2 Table Top Calendars",
-                    "Highlight & Full Length Videos"
+                    "Highlight & Full Length HD Videos"
                 ],
-                perks: [],
+                perks: ["Complimentary Pre/Post Wed Shoot"],
                 contact: "www.labelknotweddings.com",
                 instagramHandle: "@labelknot_weddings",
-                instagramLink: "https://www.instagram.com/labelknot_weddings?igsh=MWlsbjl5aHZqMzhjeg==",
-                notes: ["Fixation coverage not explicitly mentioned in base price.", "Travel is additional."],
-                color: "from-emerald-50 to-teal-50",
+                instagramLink: "https://www.instagram.com/labelknot_weddings",
+                notes: ["Travel and accommodation extra outside Kochi."],
+                color: "from-emerald-50 to-teal-100",
                 badge: "Most Affordable",
                 flork: "heart"
             },
             {
                 id: 2,
+                name: "Agnitantra",
+                price: "1.7 Lakhs",
+                tagline: "The Balanced Budget",
+                events: ["Engagement", "Wedding Eve", "Wedding", "Pre/Post-Wed"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "2 Albums (75 leaf)",
+                    "2 Mini Albums",
+                    "Edited Pictures for Social Media",
+                    "Eng & Wed Highlights Combined",
+                    "Documentary Video"
+                ],
+                perks: [],
+                contact: "Ph: 9497585592",
+                instagramHandle: "@agnitantra_photography",
+                instagramLink: "https://www.instagram.com/agnitantra_photography",
+                notes: ["Extra charges for travel and accommodation if required."],
+                color: "from-cyan-50 to-blue-100",
+                badge: "Great Value",
+                flork: "camera"
+            },
+            {
+                id: 3,
                 name: "Orenda Frames",
-                price: "1.5 Lakhs",
-                tagline: "The Balanced Choice",
-                events: ["Engagement", "Madhuramvepu (Both)", "Wedding"],
+                price: "1.7 Lakhs",
+                tagline: "The Focused Trio",
+                events: ["Fixation", "Engagement", "Wedding"],
                 crew: "2 Photographers + 2 Videographers",
                 deliverables: [
                     "2 Albums (80 pages)",
                     "2 Photo frames",
                     "25 Edited Photos highlighted",
-                    "Highlight & Full Length Videos"
+                    "Highlight & Full Length HD Videos"
                 ],
-                perks: [],
+                perks: ["Complimentary Pre-wed shoot"],
                 contact: "Contact not specified",
                 instagramHandle: "@orenda_frames",
-                instagramLink: "https://www.instagram.com/orenda_frames?igsh=MTVrNG54ZHN1bzdoMA==",
-                notes: ["Great balance of coverage across all 3 main events."],
-                color: "from-blue-50 to-indigo-50",
-                badge: "Best Value",
+                instagramLink: "https://www.instagram.com/orenda_frames",
+                notes: ["Clear focus on the 3 main events."],
+                color: "from-blue-50 to-indigo-100",
+                badge: "Sweet & Simple",
                 flork: "flower"
             },
             {
-                id: 3,
-                name: "Adam's Light",
-                price: "1.8 Lakhs",
-                tagline: "The Fast Delivery Experts",
-                events: ["Engagement", "Madhuram Veppu (Both)", "Wedding"],
-                crew: "2 Photographers + 2 Videographers",
-                deliverables: [
-                    "2 Albums (100 pages) & 2 Mini Albums",
-                    "Online Signature Album (in 5 days)",
-                    "Highlights, 1 Reel & Full length video",
-                    "Calendar"
-                ],
-                perks: ["Online album delivered within 5 days", "No travel fees in Kottayam/Ernakulam"],
-                contact: "Alen George",
-                instagramHandle: "@adam.lights",
-                instagramLink: "https://www.instagram.com/adam.lights?igsh=bHVwNWljazUwMW82",
-                notes: ["Extra Rs. 30k if founder is requested."],
-                color: "from-violet-50 to-purple-100",
-                badge: "Fast Delivery",
-                flork: "camera"
-            },
-            {
-                id: 11,
+                id: 4,
                 name: "Psych Ads",
                 price: "2.0 Lakhs",
                 tagline: "The Both-Sides Package",
-                events: ["Fixation", "Engagement (Both)", "Madhuramvepp (Both)", "Wedding (Both)"],
-                crew: "1P+1V for Fixation | 2P+2V for Main",
+                events: ["Fixation", "Engagement", "Madhuramvepp", "Wedding"],
+                crew: "2 Photographers + 2 Videographers",
                 deliverables: [
                     "Two Premium 12x15 Albums (100 pages)",
-                    "Highlights (Fixation & Wed) & Full Videos",
-                    "Framed Photos & Calendar",
-                    "Max 350 Graded Pictures"
+                    "Highlights & Full Videos (Full HD)",
+                    "Max 350 Graded Pictures",
+                    "Framed Photos & Calendar"
                 ],
                 perks: ["Covers both sides (Bride & Groom)"],
                 contact: "Ph: +91 7356023706",
                 instagramHandle: "@psych_ads",
                 instagramLink: "https://www.instagram.com/psych_ads", 
-                notes: ["Travel (fuel) & Accommodation are extra.", "Strict terms on delivery timelines."],
+                notes: ["Travel (fuel) & Accommodation are extra."],
                 color: "from-amber-50 to-orange-100",
                 badge: "Both Sides",
                 flork: "heart"
             },
             {
+                id: 5,
+                name: "Tricky Fox Media",
+                price: "2.0 Lakhs",
+                tagline: "The Max Events Choice",
+                events: ["Save the Date", "Fixation", "Eng Eve", "Engagement", "Madhuramveppu", "Wedding"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "2 Digital Albums & Mini Albums",
+                    "Online Digital Album",
+                    "Cinematic Highlights & Reels",
+                    "Traditional Full Function Video"
+                ],
+                perks: ["Covers a whopping 6 events!", "Save the date included."],
+                contact: "Ph: 9633366483",
+                instagramHandle: "@trickyfoxmedia",
+                instagramLink: "https://www.instagram.com/trickyfoxmedia",
+                notes: ["Travel, Food, Accom, Toll & Courier are additional."],
+                color: "from-fuchsia-50 to-pink-100",
+                badge: "Max Coverage",
+                flork: "camera"
+            },
+            {
+                id: 6,
+                name: "TJ Wedding Films",
+                price: "2.4 Lakhs",
+                tagline: "The 4K Cinematic Pros",
+                events: ["Fixation", "Engagement", "Wedding", "Pre/Post-Wed"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "2 Albums (50/100 pages)",
+                    "Minimum 200 Edited images/Web album",
+                    "4K Function Highlights & Reels",
+                    "4K Full Function Videos"
+                ],
+                perks: ["Travel expenses included in final price", "All videos delivered in 4K resolution"],
+                contact: "Contact via PDF",
+                instagramHandle: "@tjweddingfilms",
+                instagramLink: "https://www.instagram.com/tjweddingfilms",
+                notes: ["Client manages accommodation.", "Client to provide 2TB Hard Disk."],
+                color: "from-lime-50 to-green-100",
+                badge: "4K Quality",
+                flork: "flower"
+            },
+            {
+                id: 7,
+                name: "Tuesday Lights",
+                price: "2.4 Lakhs",
+                tagline: "The Combined Classic",
+                events: ["Fixation", "Engagement", "Wedding", "Post-Wed"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "2 Luster Albums (100 pages, 12x15)",
+                    "2 Mini Candid Albums",
+                    "Highlight Video",
+                    "Full Length Video"
+                ],
+                perks: ["Bride & Groom combined package"],
+                contact: "Contact not specified",
+                instagramHandle: "@tuesdaylights",
+                instagramLink: "https://www.instagram.com/tuesdaylights",
+                notes: ["Travel charges apply additionally."],
+                color: "from-yellow-50 to-amber-100",
+                badge: "Solid Pick",
+                flork: "heart"
+            },
+            {
+                id: 8,
+                name: "Adam's Light",
+                price: "2.7 Lakhs",
+                tagline: "The Fast Delivery Experts",
+                events: ["Fixation", "Engagement", "Wedding Eves", "Wedding"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "2 Albums (100 pages, 250 pics) & 2 Minis",
+                    "Online Signature Album (in 5 days!)",
+                    "Highlights, 1 Reel & Full length videos",
+                    "Calendar"
+                ],
+                perks: ["Online album in 5 days", "Pre/Post wed complimentary (Ernakulam)"],
+                contact: "Alen George",
+                instagramHandle: "@adam.lights",
+                instagramLink: "https://www.instagram.com/adam.lights",
+                notes: ["No extra travel fees in Kottayam/Ernakulam.", "Extra Rs. 30k for Lead Photographer."],
+                color: "from-violet-50 to-purple-100",
+                badge: "Fast Delivery",
+                flork: "camera"
+            },
+            {
+                id: 9,
+                name: "Thomas David",
+                price: "2.7 Lakhs",
+                tagline: "The Elegant Standard",
+                events: ["Fixation", "Engagement", "Wedding"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "Two 12x12 Albums (60 leaves)",
+                    "Engagement & Wedding Highlights",
+                    "Engagement & Wedding Full video",
+                    "Edited pictures & Online transfer"
+                ],
+                perks: ["Candid & Traditional splits clear for main events"],
+                contact: "Contact not specified",
+                instagramHandle: "@thomasdavidphotography",
+                instagramLink: "https://www.instagram.com/thomasdavidphotography",
+                notes: ["Covers Bride & Groom combined."],
+                color: "from-sky-50 to-blue-100",
+                badge: "Elegant",
+                flork: "flower"
+            },
+            {
                 id: 10,
+                name: "Bows & Vows",
+                price: "2.75 Lakhs",
+                tagline: "The Complete Magazine Kit",
+                events: ["Fixation", "Engagement", "Wedding"],
+                crew: "2 Photographers + 2 Videographers",
+                deliverables: [
+                    "2 Wedding Magazine Albums (70 leaf)",
+                    "Signature online album (300 pics)",
+                    "3 Cinematic Highlights videos",
+                    "Wedding full length video"
+                ],
+                perks: ["Complimentary Mini album, frame, calendar & Pre/Post shoot"],
+                contact: "Bows & Vows",
+                instagramHandle: "@bowsnvows.weddings",
+                instagramLink: "https://instagram.com/bowsnvows.weddings",
+                notes: ["Travel & Accommodation excluded."],
+                color: "from-red-50 to-rose-100",
+                badge: "Lots of Perks",
+                flork: "heart"
+            },
+            {
+                id: 11,
                 name: "Shabeer Zyed",
                 price: "3.0 Lakhs",
                 tagline: "The Grand 5-Event Package",
-                events: ["Fixation", "Engagement", "Madhuram Veppu", "Wedding", "Save the Date"],
-                crew: "Large crew varying by event",
+                events: ["Fixation", "Engagement", "Madhuram Veppu (Both)", "Wedding"],
+                crew: "Large Crew Varying by Event",
                 deliverables: [
                     "2 Premium 50-Leaf Magazine Albums",
                     "800 edited pictures & soft copies",
@@ -226,10 +359,32 @@
                 perks: ["Complimentary 2hr Save the Date shoot"],
                 contact: "Fousia: 9567177678",
                 instagramHandle: "@shabeerzyed_photography",
-                instagramLink: "https://www.instagram.com/shabeerzyed_photography?igsh=a3M1ZzZsMnh0YTNm",
-                notes: ["Highest price.", "Travel, food & accommodation are extra."],
+                instagramLink: "https://www.instagram.com/shabeerzyed_photography",
+                notes: ["Travel, food & accommodation extra outside Ernakulam."],
                 color: "from-rose-50 to-pink-100",
-                badge: "Premium",
+                badge: "Grand Coverage",
+                flork: "camera"
+            },
+            {
+                id: 12,
+                name: "WEVA",
+                price: "3.5 Lakhs",
+                tagline: "The Ultimate Premium",
+                events: ["Fixation", "Engagement", "Madhuram Veppu", "Wedding"],
+                crew: "Lead Candid & Conventional Crew",
+                deliverables: [
+                    "High-End Full HD Videos of all events",
+                    "Premium Custom Albums",
+                    "Dedicated Event Teasers (1 min max)",
+                    "Complete RAW films provided"
+                ],
+                perks: ["Top tier GM Lenses and Cine Line equipment used", "NA Travel/Accom for Kochi"],
+                contact: "Teena Kevin",
+                instagramHandle: "@wevaphotography",
+                instagramLink: "https://www.instagram.com/wevaphotography",
+                notes: ["Highest premium tier.", "Client provides 2TB SSD for RAWs."],
+                color: "from-slate-50 to-gray-200",
+                badge: "Premium Tier",
                 flork: "flower"
             }
         ];
@@ -277,7 +432,7 @@
 
             // Badge HTML (conditional)
             const badgeHtml = photo.badge ? `
-                <div class="absolute -top-4 -right-4 bg-white shadow-md text-slate-800 font-bold px-5 py-2 rounded-full border-2 border-rose-100 flex items-center gap-2 z-10 rotate-3 group-hover:rotate-6">
+                <div class="absolute -top-4 -right-4 bg-white shadow-md text-slate-800 font-bold px-5 py-2 rounded-full border-2 border-rose-100 flex items-center gap-2 z-10 rotate-3 group-hover:rotate-6 transition-transform">
                     <i data-lucide="star" class="w-4 h-4 text-rose-400 fill-rose-400"></i>
                     ${photo.badge}
                 </div>
@@ -286,7 +441,7 @@
             // Instagram Button HTML (conditional)
             const instagramHtml = photo.instagramLink ? `
                 <a href="${photo.instagramLink}" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 hover:shadow-lg">
+                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 hover:shadow-lg mt-2">
                     <div class="absolute inset-0 w-full h-full bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
                     <i data-lucide="instagram" class="w-5 h-5 relative z-10"></i>
                     <span class="relative z-10">Follow ${photo.instagramHandle}</span>
@@ -295,7 +450,7 @@
 
             // Notes Section HTML (conditional)
             const notesSectionHtml = (photo.notes.length > 0 || photo.perks.length > 0) ? `
-                <div class="bg-white/50 p-4 rounded-2xl border border-white border-dashed">
+                <div class="bg-white/50 p-4 rounded-2xl border border-white border-dashed mt-4">
                     ${perksHtml}
                     ${notesHtml}
                 </div>
@@ -303,7 +458,7 @@
 
             // Combine into main card
             const cardHtml = `
-                <div class="relative bg-gradient-to-br ${photo.color} rounded-[2.5rem] p-8 shadow-lg shadow-rose-100/50 border-4 border-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group">
+                <div class="relative bg-gradient-to-br ${photo.color} rounded-[2.5rem] p-8 shadow-lg shadow-rose-100/50 border-4 border-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col h-full">
                     ${badgeHtml}
 
                     <!-- Header -->
@@ -313,17 +468,17 @@
                             <div class="inline-block bg-white/60 text-slate-700 px-3 py-1 rounded-xl text-sm font-semibold mb-3">
                                 ${photo.tagline}
                             </div>
-                            <div class="text-4xl font-extrabold text-rose-500">
+                            <div class="text-3xl font-extrabold text-rose-500">
                                 ₹${photo.price}
                             </div>
                         </div>
-                        <div class="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center -mt-2 -mr-2 shadow-inner group-hover:scale-110 transition-transform">
+                        <div class="w-20 h-20 bg-white/50 rounded-full flex items-center justify-center -mt-2 -mr-2 shadow-inner group-hover:scale-110 transition-transform flex-shrink-0">
                             ${getFlorkSvg(photo.flork, 'w-16 h-16')}
                         </div>
                     </div>
 
-                    <!-- Content Grid -->
-                    <div class="space-y-6">
+                    <!-- Content Grid (grows to fill space so footer is pushed down) -->
+                    <div class="space-y-5 flex-grow">
                         
                         <!-- Events & Crew -->
                         <div class="bg-white/60 rounded-2xl p-4 space-y-3">
@@ -352,15 +507,15 @@
 
                         <!-- Notes/Perks -->
                         ${notesSectionHtml}
+                    </div>
 
-                        <!-- Contact & Instagram Button -->
-                        <div class="mt-5 pt-4 border-t-2 border-white space-y-3">
-                            <div class="flex items-center text-sm text-slate-700 font-medium bg-white/80 p-3 rounded-xl shadow-sm">
-                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-rose-500 shrink-0"></i>
-                                <span>${photo.contact}</span>
-                            </div>
-                            ${instagramHtml}
+                    <!-- Contact & Instagram Button (sticks to bottom) -->
+                    <div class="mt-6 pt-4 border-t-2 border-white space-y-3">
+                        <div class="flex items-center text-sm text-slate-700 font-medium bg-white/80 p-3 rounded-xl shadow-sm">
+                            <i data-lucide="phone" class="w-4 h-4 mr-2 text-rose-500 shrink-0"></i>
+                            <span>${photo.contact}</span>
                         </div>
+                        ${instagramHtml}
                     </div>
                 </div>
             `;
