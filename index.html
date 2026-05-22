@@ -42,8 +42,22 @@
         </p>
     </div>
 
-    <!-- MAIN CARDS CONTAINER -->
-    <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <!-- TAB NAVIGATION -->
+    <div class="max-w-7xl mx-auto px-4 md:px-8 mb-8 flex justify-center gap-4">
+        <button onclick="switchTab('photographers')" id="tab-btn-photographers" 
+                class="flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-white bg-rose-500 shadow-md hover:-translate-y-1 transition-all duration-300">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+            <span>Photography Quotes</span>
+        </button>
+        <button onclick="switchTab('events')" id="tab-btn-events" 
+                class="flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-slate-600 bg-white/60 border border-white hover:bg-white/80 hover:-translate-y-1 transition-all duration-300">
+            <i data-lucide="calendar-heart" class="w-5 h-5"></i>
+            <span>Our Big Days!</span>
+        </button>
+    </div>
+
+    <!-- MAIN CARDS CONTAINER (TAB CONTENT - PHOTOGRAPHERS) -->
+    <div id="tab-photographers" class="max-w-7xl mx-auto px-4 md:px-8">
         <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             <!-- Cards will be injected here by JavaScript -->
         </div>
@@ -57,8 +71,157 @@
         </div>
     </div>
 
+    <!-- EVENTS TAB CONTENT -->
+    <div id="tab-events" class="hidden max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            
+            <!-- Fixation Event Card -->
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">Fixation</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-violet-100 to-purple-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-violet-600"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-6">The first moment of agreement</p>
+                
+                <div class="space-y-4">
+                    <!-- Date Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="calendar" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Date]</span>
+                    </div>
+                    
+                    <!-- Venue Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Venue]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Engagement Event Card -->
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">Engagement</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="heart" class="w-6 h-6 text-rose-500 fill-rose-500"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-6">The official celebration begins</p>
+                
+                <div class="space-y-4">
+                    <!-- Date Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="calendar" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Date]</span>
+                    </div>
+                    
+                    <!-- Venue Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Venue]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Madhuram Veppu Event Card -->
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">Madhuram Veppu</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-yellow-100 to-amber-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="flower" class="w-6 h-6 text-amber-600"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-6">Bride and groom preparations</p>
+                
+                <div class="space-y-4">
+                    <!-- Date Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="calendar" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Date]</span>
+                    </div>
+                    
+                    <!-- Venue Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Venue]</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- The Wedding Event Card -->
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">The Wedding</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-100 to-rose-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="ring" class="w-6 h-6 text-red-500"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-6">The big day of forever moments</p>
+                
+                <div class="space-y-4">
+                    <!-- Date Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="calendar" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Date]</span>
+                    </div>
+                    
+                    <!-- Venue Input -->
+                    <div class="flex items-center gap-3 bg-white/60 p-3 rounded-xl">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0"></i>
+                        <span class="text-slate-700 font-medium">[Add Venue]</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer Message for Events Tab -->
+        <div class="mt-16 text-center flex flex-col items-center justify-center">
+            <p class="text-rose-500 font-bold text-xl tracking-wide">
+                Plan your perfect photography timeline 📅✨
+            </p>
+        </div>
+    </div>
+
     <!-- JAVASCRIPT LOGIC & DATA -->
     <script>
+        // --- TAB SWITCHING FUNCTION ---
+        function switchTab(tabName) {
+            const photographersTab = document.getElementById('tab-photographers');
+            const eventsTab = document.getElementById('tab-events');
+            const photographersBtn = document.getElementById('tab-btn-photographers');
+            const eventsBtn = document.getElementById('tab-btn-events');
+
+            if (tabName === 'photographers') {
+                // Show photographers tab, hide events tab
+                photographersTab.classList.remove('hidden');
+                eventsTab.classList.add('hidden');
+
+                // Update button styles
+                photographersBtn.classList.remove('bg-white/60', 'text-slate-600', 'border', 'border-white', 'hover:bg-white/80');
+                photographersBtn.classList.add('bg-rose-500', 'text-white', 'shadow-md');
+
+                eventsBtn.classList.remove('bg-rose-500', 'text-white', 'shadow-md');
+                eventsBtn.classList.add('bg-white/60', 'text-slate-600', 'border', 'border-white', 'hover:bg-white/80');
+            } else if (tabName === 'events') {
+                // Show events tab, hide photographers tab
+                eventsTab.classList.remove('hidden');
+                photographersTab.classList.add('hidden');
+
+                // Update button styles
+                eventsBtn.classList.remove('bg-white/60', 'text-slate-600', 'border', 'border-white', 'hover:bg-white/80');
+                eventsBtn.classList.add('bg-rose-500', 'text-white', 'shadow-md');
+
+                photographersBtn.classList.remove('bg-rose-500', 'text-white', 'shadow-md');
+                photographersBtn.classList.add('bg-white/60', 'text-slate-600', 'border', 'border-white', 'hover:bg-white/80');
+            }
+
+            // Reinitialize Lucide icons to render any new icons
+            lucide.createIcons();
+        }
+
         // --- CUSTOM CUTE FLORK STICK FIGURE GENERATOR ---
         function getFlorkSvg(variant, className = "w-32 h-32") {
             let props = '';
@@ -459,7 +622,7 @@
 
             // Badge HTML (conditional)
             const badgeHtml = photo.badge ? `
-                <div class="absolute -top-4 -right-4 bg-white shadow-md text-slate-800 font-bold px-5 py-2 rounded-full border-2 border-rose-100 flex items-center gap-2 z-10 rotate-3 group-hover:rotate-6 transition-transform">
+                <div class="absolute -top-4 -right-4 bg-white shadow-md text-slate-800 font-bold px-5 py-2 rounded-full border-2 border-rose-100 flex items-center gap-2 z-10 rotate-3 group-hover:rotate-6 transition-transform duration-300">
                     <i data-lucide="star" class="w-4 h-4 text-rose-400 fill-rose-400"></i>
                     ${photo.badge}
                 </div>
@@ -468,7 +631,7 @@
             // Instagram Button HTML (conditional)
             const instagramHtml = photo.instagramLink ? `
                 <a href="${photo.instagramLink}" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-lg hover:shadow-pink-300 active:scale-95">
+                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-lg">
                     <div class="absolute inset-0 w-full h-full bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
                     <i data-lucide="instagram" class="w-5 h-5 relative z-10"></i>
                     <span class="relative z-10">Follow ${photo.instagramHandle}</span>
@@ -489,7 +652,7 @@
             
             const contactButtonHtml = isClickable ? `
                 <a href="${contactLink}" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-blue-500 to-cyan-500 hover:shadow-lg hover:shadow-blue-300 active:scale-95">
+                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-emerald-500 to-teal-500 hover:shadow-lg">
                     <div class="absolute inset-0 w-full h-full bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
                     <i data-lucide="phone" class="w-5 h-5 relative z-10"></i>
                     <span class="relative z-10">Contact Now</span>
@@ -503,7 +666,7 @@
 
             // Combine into main card
             const cardHtml = `
-                <div class="relative bg-gradient-to-br ${photo.color} rounded-[2.5rem] p-8 shadow-lg shadow-rose-100/50 border-4 border-white transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group flex flex-col h-full">
+                <div class="relative bg-gradient-to-br ${photo.color} rounded-[2.5rem] p-8 shadow-lg shadow-rose-100/50 border-4 border-white transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group flex flex-col">
                     ${badgeHtml}
 
                     <!-- Header -->
