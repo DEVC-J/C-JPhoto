@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For You! ✨</title>
+    <title>Photography Quotes</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -34,11 +34,11 @@
         <div id="header-flork-2" class="absolute top-10 right-4 md:right-12 animate-bounce-slower hidden sm:block rotate-[15deg]"></div>
 
         <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 flex flex-col items-center justify-center gap-4">
-            <span>To capture our sweetest memoriesss, mahh prettyyyy girlll 📸💖</span>
+            <span>Professional Photography Quotes 📸✨</span>
         </h1>
         
         <p class="text-lg text-slate-600 max-w-xl mx-auto font-medium mt-4 bg-white/60 backdrop-blur-sm py-2 px-6 rounded-full inline-block shadow-sm">
-            I updated the list with all 12 amazing options ✨
+            Compare the best photography packages for your special moments
         </p>
     </div>
 
@@ -52,7 +52,7 @@
         <div class="mt-16 text-center flex flex-col items-center justify-center">
             <div id="footer-flork" class="mb-2 hover:animate-bounce cursor-pointer"></div>
             <p class="text-rose-500 font-bold text-xl tracking-wide">
-                Made with all my cuddlessss for youuu! Janny!!!! 💕
+                Find your perfect photography partner 💕
             </p>
         </div>
     </div>
@@ -92,7 +92,7 @@
                         <path d="M 85 85 L 85 130" stroke="#16a34a" stroke-width="4" stroke-linecap="round"/>
                         <path d="M 85 110 Q 100 100 105 115" stroke="#16a34a" stroke-width="4" fill="none" stroke-linecap="round"/>
                         <!-- Sunflower Petals -->
-                        <path d="M 85 85 M 85 65 L 90 75 L 100 70 L 95 80 L 105 85 L 95 90 L 100 100 L 90 95 L 85 105 L 80 95 L 70 100 L 75 90 L 65 85 L 75 80 L 70 70 L 80 75 Z" fill="#fbbf24" stroke="#b45309" stroke-width="2.5" stroke-linejoin="round"/>
+                        <path d="M 85 85 M 85 65 L 90 75 L 100 70 L 95 80 L 105 85 L 95 90 L 100 100 L 90 95 L 85 105 L 80 95 L 70 100 L 75 90 L 65 85 L 75 80 L 70 70 L 80 75 Z" fill="#fbbf24" stroke="#111827" stroke-width="3"/>
                         <!-- Flower Center -->
                         <circle cx="85" cy="85" r="5" fill="#92400e" stroke="#111827" stroke-width="2"/>
                         <!-- Arms holding flower -->
@@ -119,6 +119,33 @@
                     ${props}
                 </svg>
             `;
+        }
+
+        // --- HELPER FUNCTION TO DETECT CONTACT TYPE AND CREATE LINK ---
+        function getContactLink(contact) {
+            // Phone number pattern (with or without +91, with spaces/hyphens)
+            const phonePattern = /(\+91[\s-]?)?[6-9]\d{9}/g;
+            const phoneMatch = contact.match(phonePattern);
+            
+            if (phoneMatch) {
+                // Extract just the digits from the phone number
+                const phoneNumber = phoneMatch[0].replace(/\D/g, '');
+                return `tel:+91${phoneNumber.slice(-10)}`;
+            }
+            
+            // Website/URL pattern
+            if (contact.includes('www.') || contact.includes('http')) {
+                const url = contact.includes('http') ? contact : `https://${contact}`;
+                return url;
+            }
+            
+            // Email pattern
+            if (contact.includes('@')) {
+                return `mailto:${contact}`;
+            }
+            
+            // If no specific pattern, return mailto as fallback
+            return `mailto:${contact}`;
         }
 
         // --- ALL 12 PHOTOGRAPHY PROPOSALS DATA ---
@@ -160,7 +187,7 @@
                     "Documentary Video"
                 ],
                 perks: [],
-                contact: "Ph: 9497585592",
+                contact: "9497585592",
                 instagramHandle: "@agnitantra_photography",
                 instagramLink: "https://www.instagram.com/agnitantra_photography",
                 notes: ["Extra charges for travel and accommodation if required."],
@@ -204,7 +231,7 @@
                     "Framed Photos & Calendar"
                 ],
                 perks: ["Covers both sides (Bride & Groom)"],
-                contact: "Ph: +91 7356023706",
+                contact: "+91 7356023706",
                 instagramHandle: "@psych_ads",
                 instagramLink: "https://www.instagram.com/psych_ads", 
                 notes: ["Travel (fuel) & Accommodation are extra."],
@@ -226,7 +253,7 @@
                     "Traditional Full Function Video"
                 ],
                 perks: ["Covers a whopping 6 events!", "Save the date included."],
-                contact: "Ph: 9633366483",
+                contact: "9633366483",
                 instagramHandle: "@trickyfoxmedia",
                 instagramLink: "https://www.instagram.com/trickyfoxmedia",
                 notes: ["Travel, Food, Accom, Toll & Courier are additional."],
@@ -292,7 +319,7 @@
                     "Calendar"
                 ],
                 perks: ["Online album in 5 days", "Pre/Post wed complimentary (Ernakulam)"],
-                contact: "Alen George",
+                contact: "9497585592",
                 instagramHandle: "@adam.lights",
                 instagramLink: "https://www.instagram.com/adam.lights",
                 notes: ["No extra travel fees in Kottayam/Ernakulam.", "Extra Rs. 30k for Lead Photographer."],
@@ -357,7 +384,7 @@
                     "3-5 min highlight & 5 full length videos"
                 ],
                 perks: ["Complimentary 2hr Save the Date shoot"],
-                contact: "Fousia: 9567177678",
+                contact: "9567177678",
                 instagramHandle: "@shabeerzyed_photography",
                 instagramLink: "https://www.instagram.com/shabeerzyed_photography",
                 notes: ["Travel, food & accommodation extra outside Ernakulam."],
@@ -441,7 +468,7 @@
             // Instagram Button HTML (conditional)
             const instagramHtml = photo.instagramLink ? `
                 <a href="${photo.instagramLink}" target="_blank" rel="noopener noreferrer" 
-                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 via-pink-400 to-rose-400 hover:shadow-lg mt-2">
+                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-pink-500 to-rose-500 hover:shadow-lg hover:shadow-pink-300 active:scale-95">
                     <div class="absolute inset-0 w-full h-full bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
                     <i data-lucide="instagram" class="w-5 h-5 relative z-10"></i>
                     <span class="relative z-10">Follow ${photo.instagramHandle}</span>
@@ -456,9 +483,27 @@
                 </div>
             ` : '';
 
+            // Contact Button - Smart link generation
+            const contactLink = getContactLink(photo.contact);
+            const isClickable = !photo.contact.includes('Contact not specified') && !photo.contact.includes('Contact via');
+            
+            const contactButtonHtml = isClickable ? `
+                <a href="${contactLink}" target="_blank" rel="noopener noreferrer" 
+                   class="group relative flex items-center justify-center gap-2 w-full px-4 py-3.5 text-sm font-bold text-white transition-all duration-300 rounded-2xl overflow-hidden bg-gradient-to-r from-blue-500 to-cyan-500 hover:shadow-lg hover:shadow-blue-300 active:scale-95">
+                    <div class="absolute inset-0 w-full h-full bg-white/25 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-in-out"></div>
+                    <i data-lucide="phone" class="w-5 h-5 relative z-10"></i>
+                    <span class="relative z-10">Contact Now</span>
+                </a>
+            ` : `
+                <div class="flex items-center text-sm text-slate-700 font-medium bg-white/80 p-3 rounded-xl shadow-sm">
+                    <i data-lucide="phone" class="w-4 h-4 mr-2 text-slate-400 shrink-0"></i>
+                    <span class="text-slate-500">${photo.contact}</span>
+                </div>
+            `;
+
             // Combine into main card
             const cardHtml = `
-                <div class="relative bg-gradient-to-br ${photo.color} rounded-[2.5rem] p-8 shadow-lg shadow-rose-100/50 border-4 border-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 group flex flex-col h-full">
+                <div class="relative bg-gradient-to-br ${photo.color} rounded-[2.5rem] p-8 shadow-lg shadow-rose-100/50 border-4 border-white transition-all duration-300 hover:shadow-xl hover:-translate-y-2 group flex flex-col h-full">
                     ${badgeHtml}
 
                     <!-- Header -->
@@ -511,10 +556,7 @@
 
                     <!-- Contact & Instagram Button (sticks to bottom) -->
                     <div class="mt-6 pt-4 border-t-2 border-white space-y-3">
-                        <div class="flex items-center text-sm text-slate-700 font-medium bg-white/80 p-3 rounded-xl shadow-sm">
-                            <i data-lucide="phone" class="w-4 h-4 mr-2 text-rose-500 shrink-0"></i>
-                            <span>${photo.contact}</span>
-                        </div>
+                        ${contactButtonHtml}
                         ${instagramHtml}
                     </div>
                 </div>
