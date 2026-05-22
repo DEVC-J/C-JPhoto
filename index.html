@@ -1,66 +1,205 @@
-<!-- RSVP SECTION START -->
-<section id="guest-list" style="padding: 50px 20px; max-width: 600px; margin: auto; font-family: sans-serif;">
-  <h2 style="text-align: center;">RSVP & Guest List</h2>
-  <p style="text-align: center;">Please let us know your plans so we can make the necessary arrangements.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Quotes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'bounce-slow': 'bounce 4s ease-in-out infinite',
+                        'bounce-slower': 'bounce 5s ease-in-out infinite',
+                        'pulse-slow': 'pulse 2s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-[#fff0f3] text-slate-800 font-sans pb-20 selection:bg-rose-300">
 
-  <!-- Replace "YOUR_ACCESS_KEY_HERE" with your free key from web3forms.com -->
-  <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+    <div class="pt-16 pb-12 px-6 text-center max-w-4xl mx-auto relative">
+        
+        <div id="header-flork-1" class="absolute top-4 left-4 md:left-12 animate-bounce-slow hidden sm:block rotate-[-10deg]"></div>
+        <div id="header-flork-2" class="absolute top-10 right-4 md:right-12 animate-bounce-slower hidden sm:block rotate-[15deg]"></div>
+
+        <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-4 flex flex-col items-center justify-center gap-4">
+            <span>Professional Photography Quotes 📸✨</span>
+        </h1>
+        
+        <p class="text-lg text-slate-600 max-w-xl mx-auto font-medium mt-4 bg-white/60 backdrop-blur-sm py-2 px-6 rounded-full inline-block shadow-sm">
+            Compare the best photography packages for your special moments
+        </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 md:px-8 mb-8 flex justify-center gap-4">
+        <button onclick="switchTab('photographers')" id="tab-btn-photographers" 
+                class="flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-white bg-rose-500 shadow-md hover:-translate-y-1 transition-all duration-300">
+            <i data-lucide="camera" class="w-5 h-5"></i>
+            <span>Photography Quotes</span>
+        </button>
+        <button onclick="switchTab('events')" id="tab-btn-events" 
+                class="flex items-center gap-2 px-8 py-3.5 rounded-full font-bold text-slate-600 bg-white/60 border border-white hover:bg-white/80 hover:-translate-y-1 transition-all duration-300">
+            <i data-lucide="calendar-heart" class="w-5 h-5"></i>
+            <span>Our Big Days!</span>
+        </button>
+    </div>
+
+    <div id="tab-photographers" class="max-w-7xl mx-auto px-4 md:px-8">
+        <div id="cards-container" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            </div>
+        
+        <div class="mt-16 text-center flex flex-col items-center justify-center">
+            <div id="footer-flork" class="mb-2 hover:animate-bounce cursor-pointer"></div>
+            <p class="text-rose-500 font-bold text-xl tracking-wide">
+                Find your perfect photography partner 💕
+            </p>
+        </div>
+    </div>
+
+    <div id="tab-events" class="hidden max-w-7xl mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">Fixation</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-violet-100 to-purple-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-violet-600"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-2">The first moment of agreement</p>
+                
+                <div class="space-y-3 mb-4 bg-violet-50/50 p-3 rounded-xl">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="calendar" class="w-5 h-5 text-violet-500 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Date & Time</p>
+                            <p class="text-slate-800 font-bold">June 21 • Sunday • Lunch</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Venue</p>
+                            <p class="text-slate-800 font-bold">Crown Hall - Couture Backwaters</p>
+                            <p class="text-sm text-slate-600">Changanacherry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://maps.app.goo.gl/r9uMTQffeQsnGZYC8?g_st=ic" target="_blank" rel="noopener noreferrer"
+                   class="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white bg-gradient-to-r from-violet-500 to-purple-500 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                    View on Maps
+                </a>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">Engagement</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-rose-100 to-pink-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="heart" class="w-6 h-6 text-rose-500 fill-rose-500"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-2">The official celebration begins</p>
+                
+                <div class="space-y-3 mb-4 bg-rose-50/50 p-3 rounded-xl">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="calendar" class="w-5 h-5 text-rose-500 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Date & Time</p>
+                            <p class="text-slate-800 font-bold">October 25 • Sunday • Lunch</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Venue</p>
+                            <p class="text-slate-800 font-bold">Lourdes Forane Church Auditorium</p>
+                            <p class="text-sm text-slate-600">Kottayam</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://maps.app.goo.gl/5svw3JeFhNmpQCjc9?g_st=ic" target="_blank" rel="noopener noreferrer"
+                   class="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white bg-gradient-to-r from-rose-500 to-pink-500 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                    View on Maps
+                </a>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-extrabold text-slate-900">The Wedding</h3>
+                    <div class="w-12 h-12 bg-gradient-to-br from-red-100 to-rose-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="ring" class="w-6 h-6 text-red-500"></i>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-600 font-medium mb-2">The big day of forever moments</p>
+                
+                <div class="space-y-3 mb-4 bg-red-50/50 p-3 rounded-xl">
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="calendar" class="w-5 h-5 text-red-500 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Date</p>
+                            <p class="text-slate-800 font-bold">November 8</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-start gap-3">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-rose-400 shrink-0 mt-0.5"></i>
+                        <div>
+                            <p class="text-xs text-slate-500 font-semibold uppercase tracking-wide">Venue</p>
+                            <p class="text-slate-800 font-bold">Vijaya Convention Centre</p>
+                            <p class="text-sm text-slate-600">Thiruvalla</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="https://maps.app.goo.gl/4dUDJZvrgNnyv2tVA?g_st=ic" target="_blank" rel="noopener noreferrer"
+                   class="w-full flex items-center justify-center gap-2 px-4 py-3 text-sm font-bold text-white bg-gradient-to-r from-red-500 to-rose-500 rounded-xl hover:shadow-lg transition-all duration-300">
+                    <i data-lucide="navigation" class="w-4 h-4"></i>
+                    View on Maps
+                </a>
+            </div>
+
+        </div>
+
+        <div class="mt-16 text-center flex flex-col items-center justify-center">
+            <p class="text-rose-500 font-bold text-xl tracking-wide">
+                Plan your perfect photography timeline 📅✨
+            </p>
+        </div>
+    </div>
+    
+    <section id="guest-list" style="padding: 50px 20px; max-width: 600px; margin: auto; font-family: sans-serif;">
+  <h2 style="text-align: center;" class="text-2xl font-extrabold text-slate-900 mb-2">RSVP & Guest List</h2>
+  <p style="text-align: center;" class="text-sm text-slate-600 font-medium mb-6">Please let us know your plans so we can make the necessary arrangements.</p>
+
+  <form action="https://api.web3forms.com/submit" method="POST" style="display: flex; flex-direction: column; gap: 15px;" class="bg-white/80 backdrop-blur-sm rounded-[2rem] border-2 border-white p-6 shadow-lg">
     
     <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
-    <!-- Names & Contact -->
     <label>
-      <strong>Full Name(s):</strong><br>
-      <input type="text" name="Names" required style="width: 100%; padding: 8px;">
+      <strong class="text-sm text-slate-600 font-semibold mb-2">Full Name(s):</strong><br>
+      <input type="text" name="Names" required style="width: 100%; padding: 8px;" class="rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-300">
     </label>
 
     <label>
-      <strong>Contact Number / WhatsApp:</strong><br>
-      <input type="tel" name="Phone" required style="width: 100%; padding: 8px;">
+      <strong class="text-sm text-slate-600 font-semibold mb-2">Contact Number / WhatsApp:</strong><br>
+      <input type="tel" name="Phone" required style="width: 100%; padding: 8px;" class="rounded-xl bg-white border border-slate-200 focus:outline-none focus:ring-2 focus:ring-rose-300">
     </label>
 
-    <!-- Events Attending -->
-    <fieldset style="padding: 10px;">
-      <legend><strong>Which events will you be attending?</strong></legend>
-      <label><input type="checkbox" name="Events" value="Fixation"> Fixation</label><br>
-      <label><input type="checkbox" name="Events" value="Engagement"> Engagement</label><br>
-      <label><input type="checkbox" name="Events" value="Madhuramveppu"> Madhuramveppu</label><br>
-      <label><input type="checkbox" name="Events" value="Wedding"> Wedding</label>
-    </fieldset>
-
-    <!-- Food & Drinks -->
-    <fieldset style="padding: 10px;">
-      <legend><strong>Beverage Preference</strong></legend>
-      <label><input type="radio" name="Alcohol" value="Yes" required> I will be having drinks</label><br>
-      <label><input type="radio" name="Alcohol" value="No"> I do not drink alcohol</label>
-    </fieldset>
-
-    <!-- Accommodation -->
-    <label>
-      <strong>Accommodation Needed:</strong><br>
-      <select name="Accommodation" style="width: 100%; padding: 8px;">
-        <option value="None">I have my own arrangements</option>
-        <option value="Need 1 Room">Need 1 Room</option>
-        <option value="Need 2 Rooms">Need 2 Rooms</option>
-        <option value="Group Accommodation">Group Accommodation</option>
-      </select>
-    </label>
-
-    <!-- Travel Details -->
-    <label>
-      <strong>Travel Plans (Arrival time, Train/Flight info, pickup needs):</strong><br>
-      <textarea name="Travel" rows="3" style="width: 100%; padding: 8px;" placeholder="E.g., Arriving via train on Nov 14th at 9 AM. Need pickup."></textarea>
-    </label>
-
-    <!-- Assistance Required -->
-    <label>
-      <strong>Special Assistance Required (Wheelchair, dietary restrictions, elderly care):</strong><br>
-      <textarea name="Assistance" rows="2" style="width: 100%; padding: 8px;" placeholder="Let us know how we can make you comfortable..."></textarea>
-    </label>
-
-    <!-- Submit -->
-    <button type="submit" style="padding: 12px; background-color: #2c3e50; color: white; border: none; cursor: pointer; font-size: 16px;">Submit RSVP</button>
-
-  </form>
-</section>
-<!-- RSVP SECTION END -->
+    <fieldset style="padding: 10px;" class="bg-rose-50/50 rounded-xl border border-rose-100">
+      <legend><strong class="text-sm text-slate-600 font-semibold mb-2">Which events will you be attending?</strong></legend>
+      <label class="text-sm text-slate-800"><input type="checkbox" name="Events" value="Fixation" class="accent-rose-500"> Fixation</label><br>
+      <label class="text-sm text-slate-800"><input type="checkbox" name="Events" value="Engagement" class="accent-rose-500"> Engagement</label><br>
+      <label class="text-sm text-slate-800"><input type="checkbox" name="Events" value="Madhuramveppu" class="accent-rose-500"> Madhuramveppu</label><br>
+      <label class="text-sm text-slate-800"><input type="
